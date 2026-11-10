@@ -1,0 +1,8 @@
+{
+  "documents": [
+    {"id":"D01","version_date":"2026-01-10","title":"差旅报销制度甲","keywords":"差旅 报销 期限 提交 单据 多久 时间","topic":"expense_deadline","scope":"未注明","value":"30天","text":"员工应在差旅结束后30天内提交报销单据。"},
+    {"id":"D02","version_date":"2026-02-20","title":"差旅报销制度乙","keywords":"差旅 报销 期限 提交 单据 多久 时间","topic":"expense_deadline","scope":"未注明","value":"15天","text":"员工应在差旅结束后15天内提交报销单据。"},
+    {"id":"D03","version_date":"2026-03-01","title":"视频云盘产品常见问题","keywords":"视频 云盘 上传 文件 大小 容量 限制 上限 多大 多大的文件","topic":"upload_limit","scope":"视频云盘标准版","value":"2GB","text":"视频云盘标准版单个文件上传上限为2GB。"},
+    {"id":"D04","version_date":"2026-03-02","title":"视频云盘分享说明","keywords":"视频 云盘 分享 链接 有效期 过期 多久","topic":"share_expiry","scope":"视频云盘标准版","value":"7天","text":"视频云盘标准版的分享链接默认有效期为7天。"}
+  ]
+}

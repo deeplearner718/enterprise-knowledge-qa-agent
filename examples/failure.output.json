@@ -1,0 +1,55 @@
+{
+  "status": "insufficient",
+  "answer": "无法核实资料。",
+  "citations": [],
+  "gap": "工具故障，原文不可核查。",
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_documents",
+      "args": {
+        "query": "视频云盘上传上限是多少？"
+      },
+      "reason": "需要检索候选资料。",
+      "result": [
+        {
+          "id": "D03",
+          "version_date": "2026-03-01",
+          "title": "视频云盘产品常见问题",
+          "topic": "upload_limit",
+          "score": 6
+        },
+        {
+          "id": "D04",
+          "version_date": "2026-03-02",
+          "title": "视频云盘分享说明",
+          "topic": "share_expiry",
+          "score": 3
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "action": "read_document",
+      "args": {
+        "doc_id": "D03"
+      },
+      "reason": "需读取候选原文才能引用。",
+      "error": "原文读取服务暂不可用"
+    },
+    {
+      "step": 3,
+      "action": "finish",
+      "args": {
+        "status": "insufficient",
+        "answer": "无法核实资料。",
+        "gap": "工具故障，原文不可核查。",
+        "reason": "工具返回错误，停止推断。",
+        "citations": []
+      },
+      "reason": "工具返回错误，停止推断。",
+      "result": "insufficient"
+    }
+  ],
+  "mode": "mock"
+}

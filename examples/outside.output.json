@@ -1,0 +1,31 @@
+{
+  "status": "insufficient",
+  "answer": "现有资料没有可靠答案。",
+  "citations": [],
+  "gap": "未检索到相关制度。",
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_documents",
+      "args": {
+        "query": "火星飞船的燃料配方是什么？"
+      },
+      "reason": "需要检索候选资料。",
+      "result": []
+    },
+    {
+      "step": 2,
+      "action": "finish",
+      "args": {
+        "status": "insufficient",
+        "answer": "现有资料没有可靠答案。",
+        "gap": "未检索到相关制度。",
+        "reason": "检索无匹配。",
+        "citations": []
+      },
+      "reason": "检索无匹配。",
+      "result": "insufficient"
+    }
+  ],
+  "mode": "mock"
+}

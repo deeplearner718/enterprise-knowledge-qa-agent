@@ -1,0 +1,105 @@
+{
+  "status": "conflict",
+  "answer": "资料存在冲突：D01规定30天；D02规定15天。请确认适用制度。",
+  "citations": [
+    {
+      "id": "D01",
+      "quote": "员工应在差旅结束后30天内提交报销单据。"
+    },
+    {
+      "id": "D02",
+      "quote": "员工应在差旅结束后15天内提交报销单据。"
+    }
+  ],
+  "gap": "适用范围或优先级未明确。",
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_documents",
+      "args": {
+        "query": "差旅报销期限多久？"
+      },
+      "reason": "需要检索候选资料。",
+      "result": [
+        {
+          "id": "D01",
+          "version_date": "2026-01-10",
+          "title": "差旅报销制度甲",
+          "topic": "expense_deadline",
+          "score": 5
+        },
+        {
+          "id": "D02",
+          "version_date": "2026-02-20",
+          "title": "差旅报销制度乙",
+          "topic": "expense_deadline",
+          "score": 5
+        },
+        {
+          "id": "D04",
+          "version_date": "2026-03-02",
+          "title": "视频云盘分享说明",
+          "topic": "share_expiry",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "action": "read_document",
+      "args": {
+        "doc_id": "D01"
+      },
+      "reason": "需读取候选原文才能引用。",
+      "result": {
+        "id": "D01",
+        "version_date": "2026-01-10",
+        "title": "差旅报销制度甲",
+        "topic": "expense_deadline",
+        "scope": "未注明",
+        "value": "30天",
+        "text": "员工应在差旅结束后30天内提交报销单据。"
+      }
+    },
+    {
+      "step": 3,
+      "action": "read_document",
+      "args": {
+        "doc_id": "D02"
+      },
+      "reason": "需读取候选原文才能引用。",
+      "result": {
+        "id": "D02",
+        "version_date": "2026-02-20",
+        "title": "差旅报销制度乙",
+        "topic": "expense_deadline",
+        "scope": "未注明",
+        "value": "15天",
+        "text": "员工应在差旅结束后15天内提交报销单据。"
+      }
+    },
+    {
+      "step": 4,
+      "action": "finish",
+      "args": {
+        "status": "conflict",
+        "answer": "资料存在冲突：D01规定30天；D02规定15天。请确认适用制度。",
+        "gap": "适用范围或优先级未明确。",
+        "reason": "同主题原文的规则不同。",
+        "citations": [
+          {
+            "id": "D01",
+            "quote": "员工应在差旅结束后30天内提交报销单据。"
+          },
+          {
+            "id": "D02",
+            "quote": "员工应在差旅结束后15天内提交报销单据。"
+          }
+        ]
+      },
+      "reason": "同主题原文的规则不同。",
+      "result": "conflict"
+    }
+  ],
+  "mode": "mock"
+}

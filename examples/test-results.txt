@@ -1,0 +1,26 @@
+环境：Python 3.12.9
+模式：mock（非真实模型调用）
+clear: 退出码 0，输出 examples/clear.output.json
+conflict: 退出码 0，输出 examples/conflict.output.json
+outside: 退出码 0，输出 examples/outside.output.json
+paraphrase: 退出码 0，输出 examples/paraphrase.output.json
+followup: 退出码 0，输出 examples/followup.output.json
+failure: 退出码 0，输出 examples/failure.output.json
+
+测试退出码：0
+test_chat_tool_call_protocol (test_agent.AgentTests.test_chat_tool_call_protocol) ... ok
+test_clear_answer (test_agent.AgentTests.test_clear_answer) ... ok
+test_conflict (test_agent.AgentTests.test_conflict) ... ok
+test_followup (test_agent.AgentTests.test_followup) ... ok
+test_outside (test_agent.AgentTests.test_outside) ... ok
+test_paraphrase (test_agent.AgentTests.test_paraphrase) ... ok
+test_single_document_changes_answer (test_agent.AgentTests.test_single_document_changes_answer) ... ok
+test_step_limit (test_agent.AgentTests.test_step_limit) ... ok
+test_tool_failure (test_agent.AgentTests.test_tool_failure) ... ok
+test_unread_citation_rejected (test_agent.AgentTests.test_unread_citation_rejected) ... ok
+test_unread_conflict_candidate_rejected (test_agent.AgentTests.test_unread_conflict_candidate_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.023s
+
+OK

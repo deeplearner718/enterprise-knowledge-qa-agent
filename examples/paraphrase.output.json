@@ -1,0 +1,73 @@
+{
+  "status": "answered",
+  "answer": "2GB",
+  "citations": [
+    {
+      "id": "D03",
+      "quote": "视频云盘标准版单个文件上传上限为2GB。"
+    }
+  ],
+  "gap": "",
+  "trace": [
+    {
+      "step": 1,
+      "action": "search_documents",
+      "args": {
+        "query": "云盘一次能传多大的文件？"
+      },
+      "reason": "需要检索候选资料。",
+      "result": [
+        {
+          "id": "D03",
+          "version_date": "2026-03-01",
+          "title": "视频云盘产品常见问题",
+          "topic": "upload_limit",
+          "score": 5
+        },
+        {
+          "id": "D04",
+          "version_date": "2026-03-02",
+          "title": "视频云盘分享说明",
+          "topic": "share_expiry",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "action": "read_document",
+      "args": {
+        "doc_id": "D03"
+      },
+      "reason": "需读取候选原文才能引用。",
+      "result": {
+        "id": "D03",
+        "version_date": "2026-03-01",
+        "title": "视频云盘产品常见问题",
+        "topic": "upload_limit",
+        "scope": "视频云盘标准版",
+        "value": "2GB",
+        "text": "视频云盘标准版单个文件上传上限为2GB。"
+      }
+    },
+    {
+      "step": 3,
+      "action": "finish",
+      "args": {
+        "status": "answered",
+        "answer": "2GB",
+        "gap": "",
+        "reason": "已读取相关原文且未见冲突。",
+        "citations": [
+          {
+            "id": "D03",
+            "quote": "视频云盘标准版单个文件上传上限为2GB。"
+          }
+        ]
+      },
+      "reason": "已读取相关原文且未见冲突。",
+      "result": "answered"
+    }
+  ],
+  "mode": "mock"
+}
